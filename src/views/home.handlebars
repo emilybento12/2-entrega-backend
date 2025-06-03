@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+</head>
+<body>
+  <h1>Página Inicial</h1>
+  
+  {{#if products.length}}
+    <ul>
+      {{#each products}}
+        <li><strong>{{this.name}}</strong> - Preço: R$ {{this.price}}</li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>Nenhum produto cadastrado.</p>
+  {{/if}}
+  
+  <a href="/realtimeproducts">Lista de produtos</a>
+</body>
+</html>
